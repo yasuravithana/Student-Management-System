@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+        <bean id="StudentManagementSystemBean " class="org.cse.springtute.StudentManagementSystem" p:repo-ref="SimpleStudentRepositoryBean" ></bean>
+        <bean id="SimpleStudentRepositoryBean " class="org.cse.springtute.SimpleStudentRepository"  >
+            <property name="studentsDb">
+                        <map>
+                                <entry key="100498">
+                                        <bean class="org.cse.springtute.Student">
+                                                <property name="firstName" value="Hashini" />
+                                                <property name="lastName" value="Senaratne" />
+                                                <property name="regNumber" value="100498" />
+                                                <property name="address" value="154, Mahara, Kadawatha." />
+                                        </bean>
+                                </entry>
+                                <entry key="100559">
+                                        <bean class="org.cse.springtute.Student">
+                                                <property name="firstName" value="Yasura" />
+                                                <property name="lastName" value="Vithana" />
+                                                <property name="regNumber" value="100559" />
+                                                <property name="address" value="88, Kuruppumulla, Panadura." />
+                                        </bean>
+                                </entry>
+                                <entry key="100123">
+                                        <bean class="org.cse.springtute.Student">
+                                                <property name="firstName" value="Nimal" />
+                                                <property name="lastName" value="Silva" />
+                                                <property name="regNumber" value="100123" />
+                                                <property name="address" value="123, Katubedda." />
+                                        </bean>
+                                </entry>
+                        </map>
+                </property>
+        </bean>
+        <bean id="student1" class="org.cse.springtute.Student">
+                <property name="firstName" value="Amith" />
+                <property name="lastName" value="SenarSiripalaatne" />
+                <property name="regNumber" value="100126" />
+                <property name="address" value="22, Nawala." />
+        </bean>
+        <bean id="student2" class="org.cse.springtute.Student">
+                <property name="firstName" value="Saman" />
+                <property name="lastName" value="Gamage" />
+                <property name="regNumber" value="100485" />
+                <property name="address" value="89, 1st Cross Street, Colombo 7." />
+        </bean>
+        <bean id="student3" class="org.cse.springtute.Student">
+                <property name="firstName" value="Aravinda" />
+                <property name="lastName" value="Bamunugama" />
+                <property name="regNumber" value="100789" />
+                <property name="address" value="254, Samagi Mw, Horana." />
+        </bean>
+</beans>
